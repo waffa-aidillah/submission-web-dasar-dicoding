@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+html {
+    scroll-behavior: smooth;
+  }
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,23 +10,34 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+header{
+    display: inline;
+}
 
 nav{
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 80%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: auto;
     display: block;
     position: sticky;
     top: 0;
     overflow: auto;
+    background-color: #05b3fc;
 }
-nav h2{
+nav h1{
     float: left;
     font-weight: 800;
+    /*
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    -webkit-text-fill-color: transparent;
+    */
+    color: #ddd;
+    padding: 5px;
+
 }
 nav ul{
     float: right;
@@ -36,7 +49,7 @@ nav li{
 }
 nav li a{
     text-decoration: none;
-    color: black;
+    color: white;
     display: inline-block;
     padding: 10px;
     border-bottom: 3px solid transparent;
@@ -151,7 +164,6 @@ aside p{
 footer{
     margin-top: 1.5em;
     background-color: rgba(0, 98, 255, 0.2);
-    bac
 }
 footer p{
     padding: 2em 0;
@@ -173,7 +185,7 @@ footer p{
     .wrapper{
         text-align: center;
     }
-    nav h2{
+    nav h1{
         float: none;
         display: block;
         text-align: center;
