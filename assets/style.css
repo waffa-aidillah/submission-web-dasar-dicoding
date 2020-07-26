@@ -35,6 +35,13 @@ nav li{
 nav li a{
     text-decoration: none;
     color: black;
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+}
+nav li a:hover{
+    border-bottom: 3px solid cyan;
+    transition: ease-in all 0.3s;
 }
 
 /*jumbotron*/
