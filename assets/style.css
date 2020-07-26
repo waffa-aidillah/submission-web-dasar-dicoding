@@ -8,11 +8,13 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
 nav{
     padding-top: 20px;
     padding-bottom: 20px;
     width: 80%;
     margin: auto;
+    display: block;
     position: sticky;
     top: 0;
     overflow: auto;
@@ -48,9 +50,10 @@ nav li a:hover{
 .jumbotron{
     background-image: url(/assets/background-jumbotron.jpg);
     height: 60vh;
-    position: relative;
+    display: block;
     object-fit: cover;
     object-position: center;
+    overflow: auto;
 }
 .jumbotron h1{
     color: white;
@@ -59,8 +62,104 @@ nav li a:hover{
     text-align: center;
     padding-top: 25vh;
 }
+main{
+    padding-top: 25px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+main .card{
+    padding: 40px;
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.14);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.14);
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.14);
+}
+#content{
+    flex-basis: 75%;
+}
+article h2{
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*article tentang ku*/
+article{
+    display: flex;
+    flex-direction: row;
+}
+.article-icon{
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.article-icon img{
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: auto;
+    
+}
+.article-isi{
+    display: block;
+    flex-basis: 75%;
+}
+.article-isi table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.article-isi tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.article-isi td, .article-isi th{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.article-isi table th{
+    background-color: rgba(0, 98, 255, 0.5);
+}
+.article-isi table img{
+    width: 5.5em;
+    height: auto;
+}
+aside{
+    flex-basis: 25%;
+    height: fit-content;
+    position: sticky;
+    top: 9em;
+}
+aside img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+aside p{
+    text-align: center;
+    color: grey;
+    font-style: italic;
+    font-size: 1.3em;
+}
+footer{
+    margin-top: 1.5em;
+    background-color: rgba(0, 98, 255, 0.2);
+    bac
+}
+footer p{
+    padding: 2em 0;
+    text-align: center;
+    color: gray;
+    font-style: italic;
 
-
+}
 
 
 
@@ -96,5 +195,21 @@ nav li a:hover{
     .jumbotron h1{
         padding-top: 15vh;
 
+    }
+    main{
+        flex-direction: column-reverse;
+    }
+    #content{
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+        position: unset;
+    }
+    article{
+        flex-direction: column;
+    }
+    .article-icon{
+        margin-bottom: 10px;
     }
 }
