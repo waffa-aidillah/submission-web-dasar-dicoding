@@ -61,7 +61,7 @@ nav li a:hover{
 
 /*jumbotron*/
 .jumbotron{
-    background-image: url(/assets/background-jumbotron.jpg);
+    background-image: url(assets/background-jumbotron.jpg);
     height: 60vh;
     display: block;
     object-fit: cover;
